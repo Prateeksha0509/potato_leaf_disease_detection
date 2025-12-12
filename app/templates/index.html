@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Potato Leaf Disease Detection</title></head>
+<body>
+<h1>Upload Potato Leaf Image</h1>
+<form method="POST" enctype="multipart/form-data">
+<input type="file" name="image">
+<button type="submit">Predict</button>
+</form>
+
+{% if prediction %}
+<h2>Prediction: {{prediction}}</h2>
+<img src="{{image_path}}" width="300">
+{% endif %}
+</body>
+</html>
